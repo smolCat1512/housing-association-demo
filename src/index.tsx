@@ -13,6 +13,8 @@ const Page1 = React.lazy(async () => import('./pages/Page1'));
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
 const Page2 = React.lazy(async () => import('./pages/Page2'));
+const Page3 = React.lazy(async () => import('./pages/Page3'));
+
 
 export const Index: React.FC = () => {
   return (
@@ -23,6 +25,7 @@ export const Index: React.FC = () => {
             <Route path="/" element={<IndexPage />} />
             <Route path="/page1" element={<Page1 />} />
             <Route path="/page2" element={<Page2 />} />
+            <Route path="/page3" element={<Page3 />} />
           </Routes>
         </BrowserRouter>
       </React.Suspense>

@@ -18,7 +18,6 @@ import {
   ModalHeading,
   Heading,
   ModalBody,
-  ModalFooter,
   Badge,
   Stack,
 } from "@twilio-paste/core";
@@ -265,7 +264,7 @@ const Page2: React.FC = () => {
                   <Td>0.2 miles</Td>
                   <Td>
                     <Stack orientation="vertical" spacing="space20">
-                      <Button variant="primary">Allocate as next job</Button>
+                      <Button variant="primary" onClick={() => navigate("/page3")}>Allocate as next job</Button>
                       <Button variant="primary">Book worker</Button>
                     </Stack>
                   </Td>
@@ -283,7 +282,7 @@ const Page2: React.FC = () => {
                     <Stack orientation="vertical" spacing="space20">
                       <Button variant="primary">Allocate as next job</Button>
                       <Button variant="primary">Book worker</Button>
-                    </Stack>{" "}
+                    </Stack>
                   </Td>
                 </Tr>
                 <Tr>
@@ -299,7 +298,7 @@ const Page2: React.FC = () => {
                     <Stack orientation="vertical" spacing="space20">
                       <Button variant="primary">Allocate as next job</Button>
                       <Button variant="primary">Book worker</Button>
-                    </Stack>{" "}
+                    </Stack>
                   </Td>
                 </Tr>
                 <Tr>
@@ -315,7 +314,7 @@ const Page2: React.FC = () => {
                     <Stack orientation="vertical" spacing="space20">
                       <Button variant="primary">Allocate as next job</Button>
                       <Button variant="primary">Book worker</Button>
-                    </Stack>{" "}
+                    </Stack>
                   </Td>
                 </Tr>
               </TBody>
@@ -328,6 +327,3 @@ const Page2: React.FC = () => {
 };
 
 export default Page2;
-function useUID() {
-  throw new Error("Function not implemented.");
-}

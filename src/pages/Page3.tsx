@@ -1,12 +1,22 @@
 import * as React from "react";
 import { Box } from "@twilio-paste/core/box";
 import { Text } from "@twilio-paste/core/text";
-import { Button, Label, Select, Option, TextArea, Table, TBody, THead, Tr, Th, Td } from "@twilio-paste/core";
-import { useNavigate } from "react-router-dom";
+import {
+  Button,
+  Label,
+  Select,
+  Option,
+  TextArea,
+  Table,
+  TBody,
+  THead,
+  Tr,
+  Th,
+  Td,
+  Heading,
+} from "@twilio-paste/core";
 
 const Page3: React.FC = () => {
-	const navigate = useNavigate();
-
   return (
     <Box
       display="flex"
@@ -14,84 +24,166 @@ const Page3: React.FC = () => {
       flexDirection="column"
       rowGap="space40"
     >
-      <Box display="flex" flexDirection="row" justifyContent="space-between">
-        <Box display="flex" flexDirection="column" rowGap="space40" alignItems="center">
+      <Box display="flex" justifyContent="center">
+        <Box
+          display="flex"
+          flexDirection="row"
+          justifyContent="space-between"
+          width="80%"
+        >
           <Box
-            borderStyle="solid"
-            borderRadius="borderRadiusCircle"
-            borderColor="colorBorderSuccess"
-            height="30px"
-            width="30px"
-            backgroundColor="colorBackgroundSuccess"
-          />
-          <Text as="p">Open</Text>
-        </Box>
+            display="flex"
+            flexDirection="column"
+            rowGap="space40"
+            alignItems="center"
+          >
+            <Box
+              borderStyle="solid"
+              borderRadius="borderRadiusCircle"
+              borderColor="colorBorderSuccess"
+              height="30px"
+              width="30px"
+              backgroundColor="colorBackgroundSuccess"
+            />
+            <Text as="p">Open</Text>
+          </Box>
 
-        <Box display="flex" flexDirection="column" rowGap="space40" alignItems="center">
           <Box
-            borderStyle="solid"
-            borderRadius="borderRadiusCircle"
-            borderColor="colorBorderSuccess"
-            height="30px"
-            width="30px"
-            backgroundColor="colorBackgroundSuccess"
+            display="flex"
+            width="150px"
+            borderBottomStyle="solid"
+            borderBottomColor="colorBorderWeak"
+            marginBottom="space120"
           />
-          <Text as="p">Job Raised</Text>
-        </Box>
 
-        <Box display="flex" flexDirection="column" rowGap="space40" alignItems="center">
           <Box
-            borderStyle="solid"
-            borderRadius="borderRadiusCircle"
-            borderColor="colorBorderWarning"
-            height="30px"
-            width="30px"
-            backgroundColor="colorBackgroundBusy"
-          />
-          <Text as="p">Worker Allocated</Text>
-        </Box>
+            display="flex"
+            flexDirection="column"
+            rowGap="space40"
+            alignItems="center"
+          >
+            <Box
+              borderStyle="solid"
+              borderRadius="borderRadiusCircle"
+              borderColor="colorBorderSuccess"
+              height="30px"
+              width="30px"
+              backgroundColor="colorBackgroundSuccess"
+            />
+            <Text as="p">Job Raised</Text>
+          </Box>
 
-        <Box display="flex" flexDirection="column" rowGap="space40" alignItems="center">
           <Box
-            borderStyle="solid"
-            borderRadius="borderRadiusCircle"
-            borderColor="colorBorderWarning"
-            height="30px"
-            width="30px"
-            backgroundColor="colorBackgroundBusy"
+            display="flex"
+            width="150px"
+            borderBottomStyle="solid"
+            borderBottomColor="colorBorderWeak"
+            marginBottom="space120"
           />
-          <Text as="p">Job Complete</Text>
-        </Box>
 
-        <Box display="flex" flexDirection="column" rowGap="space40" alignItems="center">
           <Box
-            borderStyle="solid"
-            borderRadius="borderRadiusCircle"
-            borderColor="colorBorderWarning"
-            height="30px"
-            width="30px"
-            backgroundColor="colorBackgroundBusy"
+            display="flex"
+            flexDirection="column"
+            rowGap="space40"
+            alignItems="center"
+          >
+            <Box
+              borderStyle="solid"
+              borderRadius="borderRadiusCircle"
+              borderColor="colorBorderSuccess"
+              height="30px"
+              width="30px"
+              backgroundColor="colorBackgroundSuccess"
+            />
+            <Text as="p">Worker Allocated</Text>
+          </Box>
+
+          <Box
+            display="flex"
+            width="150px"
+            borderBottomStyle="solid"
+            borderBottomColor="colorBorderWeak"
+            marginBottom="space120"
           />
-          <Text as="p">Closed</Text>
+
+          <Box
+            display="flex"
+            flexDirection="column"
+            rowGap="space40"
+            alignItems="center"
+          >
+            <Box
+              borderStyle="solid"
+              borderRadius="borderRadiusCircle"
+              borderColor="colorBorderWarning"
+              height="30px"
+              width="30px"
+              backgroundColor="colorBackgroundBusy"
+            />
+            <Text as="p">Job Complete</Text>
+          </Box>
+
+          <Box
+            display="flex"
+            width="150px"
+            borderBottomStyle="solid"
+            borderBottomColor="colorBorderWeak"
+            marginBottom="space120"
+          />
+
+          <Box
+            display="flex"
+            flexDirection="column"
+            rowGap="space40"
+            alignItems="center"
+          >
+            <Box
+              borderStyle="solid"
+              borderRadius="borderRadiusCircle"
+              borderColor="colorBorderWarning"
+              height="30px"
+              width="30px"
+              backgroundColor="colorBackgroundBusy"
+            />
+            <Text as="p">Closed</Text>
+          </Box>
         </Box>
       </Box>
 
-      <Box paddingTop="space100" display="flex" flexDirection="row" justifyContent="space-between">
-        <Text as="p">Ref: #SL124364</Text>
-        <Button onClick={() => navigate("page3")} variant="primary">Allocate Worker</Button>
+      <Box
+        paddingTop="space100"
+        display="flex"
+        flexDirection="row"
+        justifyContent="space-between"
+      >
+        <Heading as="h2" variant="heading20">
+          Ref: #SL124364
+        </Heading>
+
+        <Button variant="primary">Close Job</Button>
       </Box>
 
-      <Box width="15vw">
-        <Label htmlFor="category">Category:</Label>
-        <Select id="category">
-          <Option value="structural">Structural</Option>
-        </Select>
+      <Box display="flex" justifyContent="space-between" paddingTop="space60">
+        <Box width="15vw">
+          <Label htmlFor="category">Category:</Label>
+          <Select id="category">
+            <Option value="structural">Structural</Option>
+          </Select>
+        </Box>
+        <Text as="p">Job ID: #12314756241</Text>
       </Box>
 
-      <Box width="15vw">
-        <Label htmlFor="description">Description:</Label>
-        <TextArea id="description">Top floor leak from roof</TextArea>
+      <Box display="flex" justifyContent="space-between" paddingTop="space60">
+        <Box width="15vw" paddingBottom="space100">
+          <Label htmlFor="description">Description:</Label>
+          <TextArea id="description">Top floor leak from roof</TextArea>
+        </Box>
+        <Text as="p">Worker name: Max Monstera</Text>
       </Box>
+
+      <Heading as="h2" variant="heading20">
+        Communication History
+      </Heading>
 
       <Table>
         <THead>
@@ -108,18 +200,27 @@ const Page3: React.FC = () => {
         </THead>
         <TBody>
           <Tr>
-            <Td>12:00</Td>
+            <Td>10/06/2022 10:00:12</Td>
             <Td>Inbound</Td>
-            <Td>+44 7123 456789</Td>
-            <Td>+44 7123 456789</Td>
-            <Td>Completed</Td>
-            <Td></Td>
-            <Td>00:00:00</Td>
-            <Td></Td>
+            <Td>+447823162436</Td>
+            <Td>+161 123475</Td>
+            <Td>Concern Raised</Td>
+            <Td>RE1028374618273648192X</Td>
+            <Td>5 mins</Td>
+            <Td>Call dropped out after 5 minutes - will retry in 10 minutes</Td>
+          </Tr>
+          <Tr>
+            <Td>10/06/2022 10:15:23</Td>
+            <Td>Outbound</Td>
+            <Td>+161 123475</Td>
+            <Td>+447823162436</Td>
+            <Td>Voicemail left</Td>
+            <Td>RE1295374618273648192X</Td>
+            <Td>1 min</Td>
+            <Td>Call did not pickup - voicemail left</Td>
           </Tr>
         </TBody>
       </Table>
-
     </Box>
   );
 };
