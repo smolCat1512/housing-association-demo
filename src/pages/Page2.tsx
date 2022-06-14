@@ -20,6 +20,7 @@ import {
   ModalBody,
   ModalFooter,
   Badge,
+  Stack,
 } from "@twilio-paste/core";
 import { useNavigate } from "react-router-dom";
 
@@ -234,65 +235,92 @@ const Page2: React.FC = () => {
       <Modal
         isOpen={isOpen}
         onDismiss={handleClose}
-        size="wide"
+        size="default"
         ariaLabelledby="modal"
       >
         <ModalHeader>
           <ModalHeading>Allocate Worker</ModalHeading>
         </ModalHeader>
         <Box padding="space60">
-        <ModalBody>
-          <Table>
-            <THead>
-              <Tr>
-                <Th>Worker Name</Th>
-                <Th>Status</Th>
-                <Th>Current Job Postcode</Th>
-                <Th>Distance from current dwelling</Th>
-                <Th>Allocate</Th>
-              </Tr>
-            </THead>
-            <TBody>
-              <Tr>
-                <Td>Max Monstera</Td>
-                <Td><Badge variant="neutral" as="span">On Job</Badge></Td>
-                <Td>M1 2NT</Td>
-                <Td>0.2 miles</Td>
-                <Td>
-                  <Button variant="primary">Allocate as next</Button>
-                  <Button variant="primary">Allocate as next</Button>
-                </Td>
-              </Tr>
-              <Tr>
-                <Td>Sandra Eggs</Td>
-                <Td><Badge variant="neutral" as="span">On Job</Badge></Td>
-                <Td>WN3 6XA</Td>
-                <Td>22.9 miles</Td>
-                <Td>
-                  <Button variant="primary">Allocate</Button>
-                </Td>
-              </Tr>
-              <Tr>
-                <Td>Joshua Jones</Td>
-                <Td><Badge variant="neutral" as="span">On Job</Badge></Td>
-                <Td>M5 4HU</Td>
-                <Td>0.6 miles</Td>
-                <Td>
-                  <Button variant="primary">Allocate</Button>
-                </Td>
-              </Tr>
-              <Tr>
-                <Td>Emma Ross</Td>
-                <Td><Badge variant="neutral" as="span">On Job</Badge></Td>
-                <Td>M31 4BX</Td>
-                <Td>8.0 miles</Td>
-                <Td>
-                  <Button variant="primary">Allocate</Button>
-                </Td>
-              </Tr>
-            </TBody>
-          </Table>
-        </ModalBody>
+          <ModalBody>
+            <Table>
+              <THead>
+                <Tr>
+                  <Th>Worker Name</Th>
+                  <Th>Status</Th>
+                  <Th>Current Job Postcode</Th>
+                  <Th>Distance from current dwelling</Th>
+                  <Th></Th>
+                </Tr>
+              </THead>
+              <TBody>
+                <Tr>
+                  <Td>Max Monstera</Td>
+                  <Td>
+                    <Badge variant="neutral" as="span">
+                      On Job
+                    </Badge>
+                  </Td>
+                  <Td>M1 2NT</Td>
+                  <Td>0.2 miles</Td>
+                  <Td>
+                    <Stack orientation="vertical" spacing="space20">
+                      <Button variant="primary">Allocate as next job</Button>
+                      <Button variant="primary">Book worker</Button>
+                    </Stack>
+                  </Td>
+                </Tr>
+                <Tr>
+                  <Td>Sandra Eggs</Td>
+                  <Td>
+                    <Badge variant="neutral" as="span">
+                      On Job
+                    </Badge>
+                  </Td>
+                  <Td>WN3 6XA</Td>
+                  <Td>22.9 miles</Td>
+                  <Td>
+                    <Stack orientation="vertical" spacing="space20">
+                      <Button variant="primary">Allocate as next job</Button>
+                      <Button variant="primary">Book worker</Button>
+                    </Stack>{" "}
+                  </Td>
+                </Tr>
+                <Tr>
+                  <Td>Joshua Jones</Td>
+                  <Td>
+                    <Badge variant="neutral" as="span">
+                      On Job
+                    </Badge>
+                  </Td>
+                  <Td>M5 4HU</Td>
+                  <Td>0.6 miles</Td>
+                  <Td>
+                    <Stack orientation="vertical" spacing="space20">
+                      <Button variant="primary">Allocate as next job</Button>
+                      <Button variant="primary">Book worker</Button>
+                    </Stack>{" "}
+                  </Td>
+                </Tr>
+                <Tr>
+                  <Td>Emma Ross</Td>
+                  <Td>
+                    <Badge variant="neutral" as="span">
+                      On Job
+                    </Badge>
+                  </Td>
+                  <Td>M31 4BX</Td>
+                  <Td>8.0 miles</Td>
+                  <Td>
+                    <Stack orientation="vertical" spacing="space20">
+                      <Button variant="primary">Allocate as next job</Button>
+                      <Button variant="primary">Book worker</Button>
+                    </Stack>{" "}
+                  </Td>
+                </Tr>
+              </TBody>
+            </Table>
+          </ModalBody>
         </Box>
       </Modal>
     </Box>
